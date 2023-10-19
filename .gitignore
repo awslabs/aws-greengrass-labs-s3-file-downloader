@@ -1,0 +1,9 @@
+*build/
+build
+.idea/
+dependency-reduced-pom.xml
+**.DS_STORE
+**.DS_Store
+*.iml
+target/
+.vscode

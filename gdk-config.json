@@ -1,0 +1,16 @@
+{
+	"component": {
+		"aws.greengrass.labs.S3FileDownloader": {
+			"author": "Amazon Web Services",
+			"version": "NEXT_PATCH",
+			"build": {
+				"build_system": "maven"
+			},
+			"publish": {
+				"bucket": "greengrass-artifacts",
+				"region": "eu-west-1"
+			}
+		}
+	},
+	"gdk_version": "1.1.0"
+}

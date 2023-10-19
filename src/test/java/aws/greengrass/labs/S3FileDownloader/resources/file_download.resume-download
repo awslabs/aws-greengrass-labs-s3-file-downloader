@@ -1,0 +1,1 @@
+{"bytesTransferred":83886080,"fileLastModified":1674226203.564,"totalSizeInBytes":155896790,"s3ObjectLastModified":1673449443.000,"downloadFileRequest":{"destination":"keyname","getObjectRequest":{"Bucket":"bucketName","Key":"keyname"}}}
