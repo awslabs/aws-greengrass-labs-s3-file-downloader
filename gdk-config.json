@@ -7,8 +7,8 @@
 				"build_system": "maven"
 			},
 			"publish": {
-				"bucket": "greengrass-artifacts",
-				"region": "eu-west-1"
+				"bucket": "<S3 BUCKET PREFIX>",
+				"region": "<REGION>"
 			}
 		}
 	},
