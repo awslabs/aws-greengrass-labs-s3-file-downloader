@@ -27,7 +27,26 @@ For more information, see [component types](https://docs.aws.amazon.com/greengra
 
 ### Amazon S3 access
 
-This component will download a file from an S3 Bucket to the local disk. You need to modify the Token Exchange Role that is used by Greengrass and give authorization to the S3 bucket that you want to use to download files from. See [Authorize core devices to interact with AWS services](https://docs.aws.amazon.com/greengrass/v2/developerguide/device-service-role.html) for the details. It is also possible to use the [artifacts bucket](https://docs.aws.amazon.com/greengrass/v2/developerguide/device-service-role.html#device-service-role-access-s3-bucket) that Greengrass already has permission to deploy components for this purpose.
+This component will download a file from an S3 Bucket to the local disk. You need to modify the Token Exchange Role that is used by Greengrass and give authorization to the S3 bucket that you want to use to download files from. See [Authorize core devices to interact with AWS services](https://docs.aws.amazon.com/greengrass/v2/developerguide/device-service-role.html) for the details. It is also possible to use the [artifacts bucket](https://docs.aws.amazon.com/greengrass/v2/developerguide/device-service-role.html#device-service-role-access-s3-bucket) that Greengrass already has permission to deploy components.
+
+An example policy can be seen below:
+
+``` json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetObject"
+      ],
+      "Resource": "arn:aws:s3:::DOWNLOADER-BUCKET/download-folder/*"
+    }
+  ]
+}
+```
+
+You can read more about best practices of creating IAM policies in [this documentation](https://docs.aws.amazon.com/greengrass/v2/developerguide/security_iam_id-based-policy-examples.html#security_iam_service-with-iam-policy-best-practices).
 
 ## Dependencies
 This component requires the following dependencies.
